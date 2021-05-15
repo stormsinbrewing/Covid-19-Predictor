@@ -5,3 +5,4 @@ RUN pip install torchvision
 RUN pip install opencv-python
 RUN pip install requests
 RUN pip install pillow
+ADD model.pkl .
