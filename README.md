@@ -1,7 +1,9 @@
 <h1 align="center">Covid-19 Predictor</h1>
 <h5 align="center">@NishkarshRaj @krannaut @rishabhnegi22 @megharawat3</h3>
 
-![Poster](img/poster.png)
+<p align=center>
+  <img src="img/poster.png" width="600" height="400">
+</p>
 
 ### Create the Model from Scratch
 
@@ -15,11 +17,18 @@
 
 #### Plan of Action
 
-![Plan of Action](img/planofwork.png)
+<p align="center">
+  <img src="img/planofwork.png" width="700" height="600">
+</p>
 
 #### Backlog
 
 - [x] Create GitHub Repository
+- [x] Build Covid Predictor Model using PyTorch 
+- [x] Implement Predictor for the Model
+- [x] Implement Model Metrics Detector
+- [x] Expose the Predictor as Rest Endpoint using Seldon
+- [x] Create a ModelDB x MLflow AIOps Pipeline for onboarding the model  
 
 #### References
 
