@@ -15,6 +15,12 @@
 
 ### Do it Yourself: ModelDB x MLflow Workflow for End-to-End MLOps Pipeline
 
+#### Tools
+
+<p align="center">
+  <img src="img/Tools.png" width="400" height="600">
+</p>
+
 #### Plan of Action
 
 <p align="center">
@@ -34,3 +40,7 @@
 
 * [Pre-Trained Model](https://drive.google.com/file/d/11UUIpfpSnJdZ2axT4hlQAJliLf4U-FNk/view)
 * [Covid Dataset](https://github.com/UCSD-AI4H/COVID-CT)
+
+#### License
+
+Open Source under [MIT License](LICENSE)
