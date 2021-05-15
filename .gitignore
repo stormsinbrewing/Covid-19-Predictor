@@ -3,3 +3,7 @@
 
 # tensorflow logs
 ~/
+
+# Dataset
+Data-split/
+Images-processed/

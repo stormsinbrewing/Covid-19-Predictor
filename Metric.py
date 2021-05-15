@@ -89,20 +89,20 @@ val_transformer = transforms.Compose([
 
 batchsize = 8
 
-trainset = CovidCTDataset(root_dir='Images-processed/',
+trainset = CovidCTDataset(root_dir='./Images-processed/',
                           classes = ['CT_NonCOVID', 'CT_COVID'],
-                          covid_files='Data-split/COVID/trainCT_COVID.txt',
-                          non_covid_files='Data-split/NonCOVID/trainCT_NonCOVID.txt',
+                          covid_files='./Data-split/COVID/trainCT_COVID.txt',
+                          non_covid_files='./Data-split/NonCOVID/trainCT_NonCOVID.txt',
                           transform= train_transformer)
-valset = CovidCTDataset(root_dir='Images-processed/',
+valset = CovidCTDataset(root_dir='./Images-processed/',
                           classes = ['CT_NonCOVID', 'CT_COVID'],
-                          covid_files='Data-split/COVID/valCT_COVID.txt',
-                          non_covid_files = 'Data-split/NonCOVID/valCT_NonCOVID.txt',
+                          covid_files='./Data-split/COVID/valCT_COVID.txt',
+                          non_covid_files = './Data-split/NonCOVID/valCT_NonCOVID.txt',
                           transform= val_transformer)
-testset = CovidCTDataset(root_dir='Images-processed/',
+testset = CovidCTDataset(root_dir='./Images-processed/',
                           classes = ['CT_NonCOVID', 'CT_COVID'],
-                          covid_files='Data-split/COVID/testCT_COVID.txt',
-                          non_covid_files='Data-split/NonCOVID/testCT_NonCOVID.txt',
+                          covid_files='./Data-split/COVID/testCT_COVID.txt',
+                          non_covid_files='./Data-split/NonCOVID/testCT_NonCOVID.txt',
                           transform= val_transformer)
 
 train_loader = DataLoader(trainset, batch_size=batchsize, drop_last=False, shuffle=True)
@@ -110,7 +110,6 @@ val_loader = DataLoader(valset, batch_size=batchsize, drop_last=False, shuffle=F
 test_loader = DataLoader(testset, batch_size=batchsize, drop_last=False, shuffle=False)
 
 # Metrics to Judge Model
-''' 
 def compute_metrics(model, test_loader, plot_roc_curve = False):
     
     model.eval()
@@ -195,11 +194,9 @@ def compute_metrics(model, test_loader, plot_roc_curve = False):
     
     
     return metrics_dict
-'''
 
-'''
 ## Testing
-model = torch.load("pretrained_covid_model.pkl",map_location=torch.device('cpu'))
+model = torch.load("model.pkl",map_location=torch.device('cpu'))
 metrics_dict = compute_metrics(model, test_loader, plot_roc_curve = True)
 print('------------------- Test Performance --------------------------------------')
 print("Accuracy \t {:.3f}".format(metrics_dict['Accuracy']))
@@ -207,4 +204,3 @@ print("Sensitivity \t {:.3f}".format(metrics_dict['Sensitivity']))
 print("Specificity \t {:.3f}".format(metrics_dict['Specificity']))
 print("Area Under ROC \t {:.3f}".format(metrics_dict['Roc_score']))
 print("------------------------------------------------------------------------------")
-'''
