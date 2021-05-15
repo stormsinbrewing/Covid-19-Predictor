@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covid-predictor
+  labels:
+    app: covid-predictor
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: covid-predictor
+  template:    
+    metadata:
+      labels:
+        app: covid-predictor
+    spec:
+      containers:
+      - name: covid-predictor
+        image: nishkarshraj/covid-predictor
+        imagePullPolicy: Always
+        ports:
+        - name: port5000
+          containerPort: 5000
+        - name: port6000
+          containerPort: 6000
+        - name: http
+          containerPort: 9000
