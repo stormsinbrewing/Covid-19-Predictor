@@ -1,6 +1,6 @@
 ## Metrics of Model
 
-![Metrics](metrics.png)
+![Metrics](Metrics.png)
 
 * Determines metrics of Picke Model being used:
 	* Accuracy
