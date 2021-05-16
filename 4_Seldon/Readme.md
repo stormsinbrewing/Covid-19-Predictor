@@ -15,7 +15,13 @@ s2i build . [base image] [seldon image]
 ### Expose Seldon Image as local endpoint
 
 ```
-docker run --rm --name test -p 9000:9000 -p 5000:5000 -p 6000:6000 base
+docker run --rm --name test -p 9000:9000 -p 5000:5000 -p 6000:6000 [seldon image]
+```
+
+### Download our official Docker Image
+
+```
+docker pull nishkarshraj/covid-predictor
 ```
 
 ### Hit the Local Endpoint with cURL
