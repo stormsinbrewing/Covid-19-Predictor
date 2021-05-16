@@ -21,10 +21,17 @@
   <img src="img/Tools.png" width="400" height="600">
 </p>
 
+#### AIOps Pipeline
+
+<p align="center">
+  <img src="img/aiops.png" width="400" height="600">
+</p>
+
+
 #### Plan of Action
 
 <p align="center">
-  <img src="img/planofwork.png" width="700" height="600">
+  <img src="img/planofwork.png" width="400" height="600">
 </p>
 
 #### Backlog
