@@ -41,8 +41,5 @@ docker build -t [Final Image] .
 
 docker run --rm -it -p 5000:8080 nish
 
-curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{ 
-    "columns": ["preg", "plas", "pres", "skin", "test", "mass", "pedi", "age"], 
-    "data": [[10, 101, 76, 48, 180, 32.9, 0.171, 63], [0, 137, 40, 35, 168, 43.1, 2.288, 33]]
-}'
+curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data":{"ndarray":["https://content.steward.org/sites/default/files/image01.jpg",1]}}'
 ```
