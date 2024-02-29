@@ -1,4 +1,4 @@
-FROM seldonio/seldon-core-s2i-python3:1.6.0
+FROM seldonio/seldon-core-s2i-python3:1.18.1
 RUN pip install --upgrade pip
 RUN pip install torch
 RUN pip install torchvision
